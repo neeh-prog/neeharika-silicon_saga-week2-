@@ -92,7 +92,7 @@ Result: The DAC translates these digital numbers into a physical, continuous ana
 
 ---
 
-### 📊 BabySoC Components Breakdown  
+## 📊 BabySoC Components Breakdown  
 
 | **Component** | **What It Is**              | **Its Job on the Chip** |
 |---------------|------------------------------|--------------------------|
@@ -132,7 +132,7 @@ A Phase-Locked Loop (PLL) is an essential control system that generates an outpu
    - PLLs adjust continuously to maintain a precise and stable internal clock.
 
    ---
-# 🎛️ Digital-to-Analog Converter (DAC): The Digital Translator
+## 🎛️ Digital-to-Analog Converter (DAC): The Digital Translator
 
 A **Digital-to-Analog Converter (DAC)** converts a digital input (0s and 1s) into a real-world analog signal (continuous voltage or current), allowing digital devices to interact with the physical world.
 
@@ -172,7 +172,7 @@ By practicing **functional modelling with BabySoC**, we take the first step towa
 
 ## Task 2:– Labs (Hands-on Functional Modelling) 
 
-# 🔗 Cloning the Project
+## 🔗 Cloning the Project
 To begin, clone the VSDBabySoC repository using the following command:
 
 *git clone https://github.com/manili/VSDBabySoC.git*
@@ -188,31 +188,31 @@ To check if the command get cloned or not :
 
 ---
 
-# TLV to Verilog Conversion for RVMYTH
+## TLV to Verilog Conversion for RVMYTH
 Initially, you will see only the rvmyth.tlv file inside src/module/, since the RVMYTH core is written in TL-Verilog.
 To convert it into a .v file for simulation, follow the steps below:
 *🔧 TLV to Verilog Conversion Steps*
 
 ```
-# Step 1: Install python3-venv (if not already installed)
+## Step 1: Install python3-venv (if not already installed)
 sudo apt update
 sudo apt install python3-venv python3-pip
 
-# Step 2: Create and activate a virtual environment
+## Step 2: Create and activate a virtual environment
 cd VSDBabySoC/
 python3 -m venv sp_env
 source sp_env/bin/activate
 
-# Step 3: Install SandPiper-SaaS inside the virtual environment
+## Step 3: Install SandPiper-SaaS inside the virtual environment
 pip install pyyaml click sandpiper-saas
 
-# Step 4: Convert rvmyth.tlv to Verilog
+## Step 4: Convert rvmyth.tlv to Verilog
 sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
 ```
 
-# VSDBabySoC RTL to Gate-Level Simulation Flow
+## VSDBabySoC RTL to Gate-Level Simulation Flow
 
-# 1️⃣ Pre-Synthesis Simulation:
+## 1️⃣ Pre-Synthesis Simulation:
    - Compile RTL with Icarus Verilog
    - Purpose: Verify RTL functionality before synthesis
    - Output: output/pre_synth_sim/pre_synth_sim.out and waveform .vcd
@@ -239,7 +239,7 @@ post_synth_sim.out  pre_synth_sim.out
  **The pre-synthesis waveform verifies the logical correctness (functionality) of  design without worrying about the physical delays**
  
  ---
-# 2️⃣ Post-Synthesis Simulation:
+## 2️⃣ Post-Synthesis Simulation:
  
  - Compile synthesized netlist + standard cells with Icarus Verilog
    - Purpose: Verify gate-level behavior matches RTL
