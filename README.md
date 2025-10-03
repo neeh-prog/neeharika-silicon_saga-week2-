@@ -258,6 +258,7 @@ ls
 post_synth_sim.out  post_synth_sim.vcd
 ```
 ![output](./assets/post_synth%202.png)
+![output](./assets/post-synth%201.png)
 
 - Post-Synthesis Waveform Tells Us Logical Functionality is Confirmed.
 - It models the real timing delay of the physical gates.
