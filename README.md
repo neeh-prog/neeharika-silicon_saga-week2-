@@ -1,4 +1,4 @@
-# 📖 Silicon Saga — Chapter 2  (Week 2)
+# 🌸📖 Silicon Saga__Chapter 2  (Week 2) 🌸
 ## Task 1: Understanding SoC Fundamentals & BabySoC Functional Modelling  
 
 **Aim:** Building a strong foundation in SoC design by exploring the fundamentals and practicing functional modelling using **Icarus Verilog** & **GTKWave**.  
@@ -72,21 +72,21 @@ Together, these form a **complete computing system on a single chip**.
  **The VSDBabySoC** is a small, specialized System on Chip (SoC) designed primarily as a testing ground for new components. 
 
  ## The main goal is two-fold:
--*First-Time Testing:* To integrate and test three specific, open-source hardware blocks (the RVMYTH, PLL, and DAC) together for the first time.
--*Analog Calibration:* To accurately tune its analog components (like the PLL and DAC) for reliable real-world use.
+**First-Time Testing:** To integrate and test three specific, open-source hardware blocks (the RVMYTH, PLL, and DAC) together for the first time.
+**Analog Calibration:** To accurately tune its analog components (like the PLL and DAC) for reliable real-world use.
 
 ## ⚙️ How the VSDBabySoC Works (The Process Flow) 
 The chip follows a three-step cycle to generate an output signal:
 
-*1. Initialization and Synchronization (The Clock)*
+**1. Initialization and Synchronization (The Clock)**
 When the SoC turns on, the 8x PLL immediately activates.
 Result: The PLL generates a precise, stable, and synchronized clock signal. This signal acts like a conductor , ensuring the RVMYTH and DAC operate at the exact same pace, preventing any timing errors or data corruption.
 
-*2. Data Processing (The Digital Signal)*
+**2. Data Processing (The Digital Signal)**
 The RVMYTH processor starts executing instructions.
 Mechanism: It uses a dedicated area called the r17 register to hold and repeatedly update a sequence of digital values. This creates a continuous stream of digital data.
 
-*3.  Analog Signal Generation (The Output)*
+**3.  Analog Signal Generation (The Output)**
  The 10-bit DAC receives the constantly changing digital values from the RVMYTH's r17 register.
 Result: The DAC translates these digital numbers into a physical, continuous analog electrical signal. This output, saved to a file named OUT, can then be used to drive external consumer devices (like older TVs or mobile audio ports) to produce sound or video.
 
@@ -258,7 +258,6 @@ ls
 post_synth_sim.out  post_synth_sim.vcd
 ```
 ![output](./assets/post_synth%202.png)
-![output2](./assets/post_synth%202.png)
 
 - Post-Synthesis Waveform Tells Us Logical Functionality is Confirmed.
 - It models the real timing delay of the physical gates.
@@ -287,7 +286,7 @@ I started with small steps, faced hurdles, and gradually built a stronger unders
 I know this is only the **beginning of a longer journey**, but documenting my process here makes me appreciate every bit of progress.  
 Here’s to more experiments, more mistakes, and more learning 🚀  
 
-*— Neeharika Chauhan*  
+🌸— Neeharika Chauhan🌸  
 
 ---
  ![Author: Neeharika Chauhan](https://img.shields.io/badge/author-Neeharika%20Chauhan-blue)
